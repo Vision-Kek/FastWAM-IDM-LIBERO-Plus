@@ -9,13 +9,6 @@ Results for FastWAM-IDM evaluated on LIBERO-Plus.
 | Optional IDM | `libero_optional_idm_2cam224.pt` | `idm`, test-time imagination | **70.58%** |
 
 The Optional IDM checkpoint supports both inference modes without retraining.
-Relative to base FastWAM, `first_frame` improves success by 11.46 percentage
-points, while `idm` improves it by 19.89 percentage points.
-
-Success rates. `n` is the number of LIBERO-Plus task instances
-in each axis. `co-train` is the gain from base FastWAM to Optional IDM in
-`first_frame` mode; `imagination` is the additional gain from `first_frame` to
-`idm`.
 
 | Axis | n | Base FastWAM | Optional IDM (`first_frame`) | Optional IDM (`idm`) | Co-training gain | Imagination gain |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -26,5 +19,11 @@ in each axis. `co-train` is the gain from base FastWAM to Optional IDM in
 | Language Instructions | 1,537 | 70.66% | 80.87% | 94.80% | +10.21 pp | +13.92 pp |
 | Objects Layout | 1,525 | 62.10% | 71.34% | 82.36% | +9.25 pp | +11.02 pp |
 | Light Conditions | 1,142 | 82.57% | 89.84% | 89.58% | +7.27 pp | -0.26 pp |
+
+`n` is the number of LIBERO-Plus task instances
+in each axis. `co-train` is the gain from base FastWAM to Optional IDM in
+`first_frame` mode; `imagination` is the additional gain from `first_frame` to
+`idm`.
+
 
 Results were obtained using upstream FastWAM at [`7faa711`](https://github.com/yuantianyuan01/FastWAM/commit/7faa71108368fbb3b6885649f112af607427a2d4).
