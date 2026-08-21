@@ -2,9 +2,7 @@
 
 Results for FastWAM-IDM evaluated on LIBERO-Plus.
 
-## Checkpoints and Inference Modes
-
-| Variant | Checkpoint | Inference mode | LIBERO-Plus success |
+| Variant | Checkpoint | Inference mode | LIBERO-Plus SR |
 | --- | --- | --- | ---: |
 | Base FastWAM | `libero_uncond_2cam224.pt` | FastWAM, no test-time imagination | **50.69%** |
 | Optional IDM | `libero_optional_idm_2cam224.pt` | `first_frame`, no test-time imagination | **62.14%** |
@@ -13,8 +11,6 @@ Results for FastWAM-IDM evaluated on LIBERO-Plus.
 The Optional IDM checkpoint supports both inference modes without retraining.
 Relative to base FastWAM, `first_frame` improves success by 11.46 percentage
 points, while `idm` improves it by 19.89 percentage points.
-
-## Seven-Axis Breakdown
 
 Success rates. `n` is the number of LIBERO-Plus task instances
 in each axis. `co-train` is the gain from base FastWAM to Optional IDM in
